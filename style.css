@@ -1,0 +1,89 @@
+html, body {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+svg {
+  width: 100px;
+  height: auto;
+}
+
+.cloud {
+  stroke-dasharray: 1520.633;
+  stroke-dashoffset: 1520.633;
+  animation: loading 2s linear forwards;
+}
+
+@keyframes loading {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/* fade in animation for main component START*/
+.fade-in {
+  animation-name: fadein;
+  animation-duration: .5s;
+  animation-timing-function: ease-in;
+  animation-delay: 0;
+}
+
+@keyframes fadein {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+/* fade in animation for main component END*/
+
+
+
+
+.behind {
+ 
+}
+
+
+/* droplet fall animation START*/
+.falling-left {
+  animation-name: dropFall;
+  animation-duration: .7s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+.falling-center {
+  animation-name: dropFall-big;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+.falling-right {
+  animation-name: dropFall;
+  animation-duration: .8s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dropFall {
+  0%    {transform: translateY(-20%); opacity: 0}
+  20%   {opacity: 1}
+  95%   {opacity: 1}
+  100%   {transform: translateY(0%); opacity: 0} 
+}
+
+@keyframes dropFall-big {
+  0%    {transform: translateY(-50%); opacity: 0}
+  20%   {opacity: 1}
+  95%   {opacity: 1}
+  100%   {transform: translateY(0%); opacity: 0} 
+}
+
+/* droplet fall animation END*/
